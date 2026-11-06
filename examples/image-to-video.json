@@ -1,0 +1,9 @@
+{
+  "model": "seedance-2.0-mini",
+  "prompt": "The camera slowly moves forward. Preserve the scene and animate the water.",
+  "duration": 4,
+  "resolution": "720p",
+  "ratio": "16:9",
+  "mode": "frames",
+  "first_frame": {"path": "C:/path/to/first-frame.png", "type": "image"}
+}

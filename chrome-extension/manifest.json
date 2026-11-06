@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Dreamina Local Chrome Bridge",
+  "version": "0.4.1",
+  "minimum_chrome_version": "120",
+  "description": "Connect one signed-in Dreamina tab to your local generation queue.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://dreamina.capcut.com/*",
+    "http://127.0.0.1:8787/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Dreamina 本地桥接"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9UYIWLnTadtV82itLMCpSE1lObe6axAeYok/vkbPIn47c4CpMLObX1O2/7gwBBxVA2c1NmWbif5he36BC33NmZFSEcOH6qvB8A+/zNWKIe6K8AN3YuBXud2tegGa4/p0eFh97r2ourT1It+YawNRQwqwH1mVatuwkh7Q4g7xiTCHOxPyQL22hPsqkNW5+aAKI5noeIWi6DzmAhfxXfZ2IdI/EA91JOlVs9Ec/IpNhqV4wBZd5IeQbCZhBCyn37YOmOu+J5VkFjURAYLlPn/nUYhUOs1pzPetajaVbBjJnJYyVQrvYyddkjFAxgyoaozqiizC1qSOnAstEjYLSXHlGQIDAQAB"
+}

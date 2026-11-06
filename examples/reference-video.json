@@ -1,0 +1,9 @@
+{
+  "model": "seedance-2.0-fast",
+  "prompt": "Use the reference video's camera movement in a calm sunrise scene.",
+  "duration": 4,
+  "resolution": "720p",
+  "ratio": "16:9",
+  "mode": "omni",
+  "references": [{"type": "video", "path": "C:/path/to/reference.mp4"}]
+}

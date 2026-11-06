@@ -1,0 +1,18 @@
+{
+  "offline_probe": [
+    {
+      "supplied_ms_token": false,
+      "ms_token_preserved": true,
+      "x_bogus_length": 28,
+      "x_gnarly_length": 332
+    },
+    {
+      "supplied_ms_token": true,
+      "ms_token_preserved": true,
+      "x_bogus_length": 28,
+      "x_gnarly_length": 332
+    }
+  ],
+  "sdk_sha256": "e180fa46bf919c17dff94e5770b1033fa32590239c958945302faf28dfe77baf",
+  "live_submission_performed": false
+}

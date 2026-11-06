@@ -1,0 +1,84 @@
+name: dreamina-gateway
+
+services:
+  database:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: dreamina
+      POSTGRES_USER: dreamina
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in deploy/server.env}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dreamina -d dreamina"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    init: true
+    shm_size: 1gb
+    stop_grace_period: 45s
+    depends_on:
+      database:
+        condition: service_healthy
+    ports:
+      - "${API_BIND:-127.0.0.1}:${API_PORT:-8787}:8787"
+    environment:
+      DATABASE_URL: postgresql+psycopg://dreamina:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@database:5432/dreamina
+      ADMIN_USERNAME: ${ADMIN_USERNAME:-admin}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Set ADMIN_PASSWORD in deploy/server.env}
+      ADMIN_PASSWORD_MIN_LENGTH: ${ADMIN_PASSWORD_MIN_LENGTH:-12}
+      PUBLIC_API_CORS_ORIGINS: '${PUBLIC_API_CORS_ORIGINS:-["*"]}'
+      PLATFORM_ENCRYPTION_KEY: ${PLATFORM_ENCRYPTION_KEY:?Set PLATFORM_ENCRYPTION_KEY in deploy/server.env}
+      CHROME_BRIDGE_KEY: ${CHROME_BRIDGE_KEY:?Set CHROME_BRIDGE_KEY in deploy/server.env}
+      CHROME_BRIDGE_EXTENSION_ID: ${CHROME_BRIDGE_EXTENSION_ID:-eicelfibiacmlhfepgoiiemfgcbdfafm}
+      LOCAL_API_KEY: ${LOCAL_API_KEY:?Set LOCAL_API_KEY in deploy/server.env for legacy internal routes}
+      WORKER_MODE: ${WORKER_MODE:-native}
+      ACCOUNT_PROXY_REQUIRED: ${ACCOUNT_PROXY_REQUIRED:-true}
+      PROXY_HEALTH_INTERVAL_SECONDS: ${PROXY_HEALTH_INTERVAL_SECONDS:-600}
+      PROXY_IP_CHECK_URL: '${PROXY_IP_CHECK_URL:-}'
+      PROXY_IP_CHECK_URLS: '${PROXY_IP_CHECK_URLS:-${PROXY_IP_CHECK_URL:-https://api64.ipify.org?format=json},https://api.ipify.org?format=json,https://ipwho.is/}'
+      PROXY_TARGET_CHECK_URL: '${PROXY_TARGET_CHECK_URL:-https://dreamina-api.us.capcut.com/}'
+      PROXY_GEO_CHECK_URL: '${PROXY_GEO_CHECK_URL:-https://ipwho.is/}'
+      FORWARDED_ALLOW_IPS: ${FORWARDED_ALLOW_IPS:-127.0.0.1}
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+      LOGIN_BROWSER_CHANNEL: chromium
+      LOGIN_BROWSER_HEADLESS: ${LOGIN_BROWSER_HEADLESS:-true}
+      LOGIN_BROWSER_ARGS: '${LOGIN_BROWSER_ARGS:-[]}'
+      LOGIN_MAX_SESSIONS: ${LOGIN_MAX_SESSIONS:-2}
+      LOGIN_SESSION_TTL: ${LOGIN_SESSION_TTL:-900}
+      LOGIN_AUTO_START_WORKER: ${LOGIN_AUTO_START_WORKER:-true}
+      MANAGED_MAX_WORKERS: ${MANAGED_MAX_WORKERS:-4}
+      NATIVE_MAX_ACCOUNT_SLOTS: ${NATIVE_MAX_ACCOUNT_SLOTS:-4}
+      NATIVE_MAX_ACCOUNT_INFLIGHT: ${NATIVE_MAX_ACCOUNT_INFLIGHT:-100}
+      NATIVE_ENTRY_REFRESH_SECONDS: ${NATIVE_ENTRY_REFRESH_SECONDS:-300}
+      NATIVE_PAGE_RELOAD_JOBS: ${NATIVE_PAGE_RELOAD_JOBS:-20}
+      MANAGED_RESTART_LIMIT: ${MANAGED_RESTART_LIMIT:-5}
+      MANAGED_RESTART_STABLE_SECONDS: ${MANAGED_RESTART_STABLE_SECONDS:-120}
+      MAINTENANCE_RETENTION_DAYS: ${MAINTENANCE_RETENTION_DAYS:-7}
+      MAINTENANCE_INTERVAL_SECONDS: ${MAINTENANCE_INTERVAL_SECONDS:-3600}
+      MAINTENANCE_MEDIA_RETENTION_DAYS: ${MAINTENANCE_MEDIA_RETENTION_DAYS:-0}
+      MAINTENANCE_INPUT_RETENTION_DAYS: ${MAINTENANCE_INPUT_RETENTION_DAYS:-0}
+      TASK_QUEUE_TIMEOUT_SECONDS: ${TASK_QUEUE_TIMEOUT_SECONDS:-60}
+      NATIVE_PREPARATION_TIMEOUT_SECONDS: ${NATIVE_PREPARATION_TIMEOUT_SECONDS:-180}
+      NATIVE_SUBMISSION_TIMEOUT_SECONDS: ${NATIVE_SUBMISSION_TIMEOUT_SECONDS:-60}
+      NATIVE_GENERATION_TIMEOUT_SECONDS: ${NATIVE_GENERATION_TIMEOUT_SECONDS:-600}
+      TASK_TOTAL_TIMEOUT_SECONDS: ${TASK_TOTAL_TIMEOUT_SECONDS:-900}
+      NATIVE_PREPARE_ATTEMPTS: ${NATIVE_PREPARE_ATTEMPTS:-2}
+      NATIVE_SUBMISSION_ATTEMPTS: ${NATIVE_SUBMISSION_ATTEMPTS:-2}
+      MANAGED_STOP_TIMEOUT: ${MANAGED_STOP_TIMEOUT:-20}
+      INTERNAL_API_URL: ${INTERNAL_API_URL:-http://127.0.0.1:8787}
+    volumes:
+      - media-data:/app/outputs
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  postgres-data:
+  media-data:

@@ -1,0 +1,277 @@
+{
+  "evidence": "normal isolated official page + route-aborted generation captures",
+  "baseline": "HAR zero-based entry 3",
+  "used_complete_cookie_header": true,
+  "login_observed": true,
+  "sdk_ready": true,
+  "challenge_detected": false,
+  "captures": {
+    "fetch": {
+      "method": "POST",
+      "endpoint_path": "/mweb/v1/aigc_draft/generate",
+      "api_host_matches_har": true,
+      "query_names": [
+        "aid",
+        "device_platform",
+        "region",
+        "da_version",
+        "web_version",
+        "aigc_features",
+        "os",
+        "web_component_open_flag",
+        "generate_id",
+        "commerce_with_input_video",
+        "babi_param",
+        "msToken",
+        "X-Bogus",
+        "X-Gnarly"
+      ],
+      "duplicate_query_names": [],
+      "query_names_missing_from_har": [],
+      "query_names_missing_from_capture": [],
+      "unsigned_query_values_differing_from_har": [
+        "generate_id"
+      ],
+      "signature_fields": {
+        "msToken": {
+          "present": true,
+          "nonempty": true,
+          "length": 156
+        },
+        "X-Bogus": {
+          "present": true,
+          "nonempty": true,
+          "length": 28
+        },
+        "X-Gnarly": {
+          "present": true,
+          "nonempty": true,
+          "length": 332
+        }
+      },
+      "header_names": [
+        "accept",
+        "accept-language",
+        "app-sdk-version",
+        "appid",
+        "appvr",
+        "content-type",
+        "cookie",
+        "device-time",
+        "did",
+        "lan",
+        "loc",
+        "origin",
+        "pf",
+        "referer",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-platform",
+        "sign",
+        "sign-ver",
+        "store-country-code",
+        "store-country-code-src",
+        "tdid",
+        "user-agent"
+      ],
+      "header_names_missing_from_har": [
+        "cookie"
+      ],
+      "header_names_missing_from_capture": [
+        "accept-encoding",
+        "cache-control",
+        "content-length",
+        "pragma",
+        "priority",
+        "sec-fetch-dest",
+        "sec-fetch-mode",
+        "sec-fetch-site"
+      ],
+      "headers_differing_from_har": [
+        {
+          "header": "accept",
+          "value_differs": true,
+          "volatile_or_identity": false
+        },
+        {
+          "header": "accept-language",
+          "value_differs": true,
+          "volatile_or_identity": false
+        },
+        {
+          "header": "device-time",
+          "value_differs": true,
+          "volatile_or_identity": true
+        },
+        {
+          "header": "sec-ch-ua",
+          "value_differs": true,
+          "volatile_or_identity": true
+        },
+        {
+          "header": "sign",
+          "value_differs": true,
+          "volatile_or_identity": true
+        },
+        {
+          "header": "user-agent",
+          "value_differs": true,
+          "volatile_or_identity": true
+        }
+      ],
+      "did_present": true,
+      "did_matches_har": true,
+      "md5_sign_matches_headers": true,
+      "cookie_present": true,
+      "cookie_count": 29,
+      "sessionid_cookie_present": true,
+      "user_agent_is_headless": true,
+      "body_bytes": 4218,
+      "body_matches_expected": true,
+      "no_generation_request_forwarded": true
+    },
+    "xhr": {
+      "method": "POST",
+      "endpoint_path": "/mweb/v1/aigc_draft/generate",
+      "api_host_matches_har": true,
+      "query_names": [
+        "aid",
+        "device_platform",
+        "region",
+        "da_version",
+        "web_version",
+        "aigc_features",
+        "os",
+        "web_component_open_flag",
+        "generate_id",
+        "commerce_with_input_video",
+        "babi_param",
+        "msToken",
+        "X-Bogus",
+        "X-Gnarly"
+      ],
+      "duplicate_query_names": [],
+      "query_names_missing_from_har": [],
+      "query_names_missing_from_capture": [],
+      "unsigned_query_values_differing_from_har": [
+        "generate_id"
+      ],
+      "signature_fields": {
+        "msToken": {
+          "present": true,
+          "nonempty": true,
+          "length": 156
+        },
+        "X-Bogus": {
+          "present": true,
+          "nonempty": true,
+          "length": 28
+        },
+        "X-Gnarly": {
+          "present": true,
+          "nonempty": true,
+          "length": 332
+        }
+      },
+      "header_names": [
+        "accept",
+        "accept-language",
+        "app-sdk-version",
+        "appid",
+        "appvr",
+        "content-type",
+        "cookie",
+        "device-time",
+        "did",
+        "lan",
+        "loc",
+        "origin",
+        "pf",
+        "referer",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-platform",
+        "sign",
+        "sign-ver",
+        "store-country-code",
+        "store-country-code-src",
+        "tdid",
+        "user-agent"
+      ],
+      "header_names_missing_from_har": [
+        "cookie"
+      ],
+      "header_names_missing_from_capture": [
+        "accept-encoding",
+        "cache-control",
+        "content-length",
+        "pragma",
+        "priority",
+        "sec-fetch-dest",
+        "sec-fetch-mode",
+        "sec-fetch-site"
+      ],
+      "headers_differing_from_har": [
+        {
+          "header": "accept",
+          "value_differs": true,
+          "volatile_or_identity": false
+        },
+        {
+          "header": "accept-language",
+          "value_differs": true,
+          "volatile_or_identity": false
+        },
+        {
+          "header": "device-time",
+          "value_differs": true,
+          "volatile_or_identity": true
+        },
+        {
+          "header": "sec-ch-ua",
+          "value_differs": true,
+          "volatile_or_identity": true
+        },
+        {
+          "header": "sign",
+          "value_differs": true,
+          "volatile_or_identity": true
+        },
+        {
+          "header": "user-agent",
+          "value_differs": true,
+          "volatile_or_identity": true
+        }
+      ],
+      "did_present": true,
+      "did_matches_har": true,
+      "md5_sign_matches_headers": true,
+      "cookie_present": true,
+      "cookie_count": 29,
+      "sessionid_cookie_present": true,
+      "user_agent_is_headless": true,
+      "body_bytes": 4218,
+      "body_matches_expected": true,
+      "no_generation_request_forwarded": true
+    }
+  },
+  "transport_outcomes": {
+    "fetch": {
+      "ended": "unexpected-resolution"
+    },
+    "xhr": {
+      "ended": "blocked"
+    }
+  },
+  "fetch_vs_xhr": {
+    "query_name_sets_equal": true,
+    "unsigned_query_values_equal": true,
+    "header_name_sets_equal": true,
+    "headers_with_different_values": [],
+    "body_equal": true,
+    "signature_values_expected_to_vary": true
+  },
+  "generation_posts_forwarded": 0,
+  "generation_posts_aborted": 2,
+  "conclusion": "Transport signature presence can be compared; no upstream acceptance was tested."
+}

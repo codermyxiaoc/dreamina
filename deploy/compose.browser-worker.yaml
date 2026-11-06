@@ -1,0 +1,20 @@
+services:
+  browser-worker:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.browser-worker
+    init: true
+    shm_size: 1gb
+    environment:
+      VNC_PASSWORD: ${VNC_PASSWORD:?Set a dedicated VNC_PASSWORD}
+    ports:
+      - "127.0.0.1:${VNC_PORT:-6080}:6080"
+    volumes:
+      - ./browser-worker.json:/data/browser-worker.json:ro
+      - browser-profile-data:/data/profiles
+      - browser-state-data:/data/worker-state
+    command: ["${WORKER_COMMAND:-run}", "--config", "/data/browser-worker.json", "--account", "${WORKER_ACCOUNT:-default}"]
+    restart: "no"
+volumes:
+  browser-profile-data:
+  browser-state-data:

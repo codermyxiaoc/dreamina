@@ -1,0 +1,630 @@
+{
+  "captured_on": "2026-10-25",
+  "source": "Dreamina page __video_generate_model_config__",
+  "draft_version": "3.3.32",
+  "models": [
+    {
+      "id": "seedance-2.5",
+      "name": "Dreamina Seedance 2.5",
+      "model_req_key": "dreamina_seedance_45_pro",
+      "resolutions": [
+        "480p",
+        "720p",
+        "1080p"
+      ],
+      "ratios": [
+        "21:9",
+        "16:9",
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16"
+      ],
+      "duration": {
+        "min": 4,
+        "max": 30,
+        "default": 4,
+        "step": 1
+      },
+      "fps": 24,
+      "max_prompt_length": 15000,
+      "materials": {
+        "supported_materials": [
+          {
+            "material_type": 1,
+            "limit": {
+              "max_count": 30,
+              "max_width": 6000,
+              "max_height": 6000,
+              "min_width": 300,
+              "min_height": 300,
+              "max_file_size": 30,
+              "min_aspect_ratio": 0.4,
+              "max_aspect_ratio": 2.5,
+              "support_formats": [
+                "jpeg",
+                "png",
+                "webp",
+                "bmp",
+                "tiff",
+                "gif",
+                "heic",
+                "heif"
+              ]
+            }
+          },
+          {
+            "material_type": 2,
+            "limit": {
+              "max_count": 10,
+              "max_duration": 30.2,
+              "min_duration": 1.8,
+              "max_width": 6000,
+              "max_height": 6000,
+              "min_width": 300,
+              "min_height": 300,
+              "max_file_size": 200,
+              "min_aspect_ratio": 0.4,
+              "max_aspect_ratio": 2.5,
+              "min_fps": 24,
+              "max_fps": 60,
+              "min_total_pixels": 409600,
+              "max_total_pixels": 8295044,
+              "support_formats": [
+                "mp4",
+                "mov"
+              ]
+            }
+          },
+          {
+            "material_type": 3,
+            "limit": {
+              "max_count": 10,
+              "max_duration": 30.2,
+              "min_duration": 1.8,
+              "max_file_size": 15,
+              "support_formats": [
+                "wav",
+                "mp3"
+              ]
+            }
+          }
+        ],
+        "max_total_count": 50,
+        "max_total_video_duration": 30.2,
+        "max_total_audio_duration": 30.2
+      },
+      "commerce": {
+        "default": {
+          "resource_sub_type": "aigc",
+          "resource_id_type": "str",
+          "resource_id": "generate_video",
+          "benefit_type": "seedance_25_720p_output",
+          "amount": 0
+        },
+        "format": "",
+        "format_conf": {},
+        "additional_conf": null,
+        "resolution_price_configs": [
+          {
+            "resolution": "480p",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_25_480p_output",
+              "amount": 0
+            },
+            "long_video_price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_25_long_video_480p_output",
+              "amount": 0
+            },
+            "no_input_video_price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_25_480p_no_input_video_output",
+              "amount": 0
+            },
+            "no_input_video_long_video_price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_25_long_video_480p_no_input_video_output",
+              "amount": 0
+            }
+          },
+          {
+            "resolution": "720p",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_25_720p_output",
+              "amount": 0
+            },
+            "long_video_price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_25_long_video_720p_output",
+              "amount": 0
+            },
+            "no_input_video_price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_25_720p_no_input_video_output",
+              "amount": 0
+            },
+            "no_input_video_long_video_price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_25_long_video_720p_no_input_video_output",
+              "amount": 0
+            }
+          },
+          {
+            "resolution": "1080p",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_25_1080p_output",
+              "amount": 0
+            },
+            "long_video_price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_25_long_video_1080p_output",
+              "amount": 0
+            },
+            "no_input_video_price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_25_1080p_no_input_video_output",
+              "amount": 0
+            },
+            "no_input_video_long_video_price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_25_long_video_1080p_no_input_video_output",
+              "amount": 0
+            }
+          }
+        ]
+      },
+      "pre_audit_policy": "agi_seedance_25",
+      "input_media_types": [
+        "unified_edit",
+        "prompt",
+        "first_frame",
+        "end_frame",
+        "long_video",
+        "edit"
+      ]
+    },
+    {
+      "id": "seedance-2.0-mini",
+      "name": "Dreamina Seedance 2.0 Mini",
+      "model_req_key": "dreamina_seedance_40_mini",
+      "resolutions": [
+        "720p",
+        "1080p",
+        "2K",
+        "4k"
+      ],
+      "ratios": [
+        "21:9",
+        "16:9",
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16"
+      ],
+      "duration": {
+        "min": 4,
+        "max": 15,
+        "default": 4,
+        "step": 1
+      },
+      "fps": 24,
+      "max_prompt_length": 4000,
+      "materials": {
+        "supported_materials": [
+          {
+            "material_type": 1,
+            "limit": {
+              "max_count": 9
+            }
+          },
+          {
+            "material_type": 2,
+            "limit": {
+              "max_count": 3,
+              "max_duration": 15,
+              "min_duration": 2,
+              "max_width": 2160,
+              "max_height": 2160,
+              "min_width": 200,
+              "min_height": 200,
+              "max_file_size": 50
+            }
+          },
+          {
+            "material_type": 3,
+            "limit": {
+              "max_count": 3,
+              "max_duration": 15,
+              "min_duration": 2,
+              "max_file_size": 15
+            }
+          }
+        ],
+        "max_total_count": 12,
+        "max_total_video_duration": 15,
+        "max_total_audio_duration": 15,
+        "required_material_types": {
+          "any_of": [
+            1,
+            2
+          ],
+          "tips_starling_key": "video_seedance_2_audio_needed"
+        }
+      },
+      "commerce": {
+        "default": {
+          "resource_sub_type": "aigc",
+          "resource_id_type": "str",
+          "resource_id": "generate_video",
+          "benefit_type": "seedance_20_mini_720p_output",
+          "amount": 0
+        },
+        "format": "",
+        "format_conf": {},
+        "additional_conf": null,
+        "resolution_price_configs": [
+          {
+            "resolution": "720p",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_20_mini_720p_output",
+              "amount": 0
+            }
+          },
+          {
+            "resolution": "1080p",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_20_mini_1080p_output",
+              "amount": 0
+            }
+          },
+          {
+            "resolution": "2k",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_20_mini_2k_output",
+              "amount": 0
+            }
+          },
+          {
+            "resolution": "4k",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_20_mini_4k_output",
+              "amount": 0
+            }
+          }
+        ]
+      },
+      "pre_audit_policy": "agi_seedance_20pro",
+      "input_media_types": [
+        "unified_edit",
+        "prompt",
+        "first_frame",
+        "end_frame"
+      ]
+    },
+    {
+      "id": "seedance-2.0-fast",
+      "name": "Dreamina Seedance 2.0 Fast",
+      "model_req_key": "dreamina_seedance_40",
+      "resolutions": [
+        "720p",
+        "1080p",
+        "2K",
+        "4k"
+      ],
+      "ratios": [
+        "21:9",
+        "16:9",
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16"
+      ],
+      "duration": {
+        "min": 4,
+        "max": 15,
+        "default": 4,
+        "step": 1
+      },
+      "fps": 24,
+      "max_prompt_length": 4000,
+      "materials": {
+        "supported_materials": [
+          {
+            "material_type": 1,
+            "limit": {
+              "max_count": 9
+            }
+          },
+          {
+            "material_type": 2,
+            "limit": {
+              "max_count": 3,
+              "max_duration": 15,
+              "min_duration": 2,
+              "max_width": 2160,
+              "max_height": 2160,
+              "min_width": 200,
+              "min_height": 200,
+              "max_file_size": 50
+            }
+          },
+          {
+            "material_type": 3,
+            "limit": {
+              "max_count": 3,
+              "max_duration": 15,
+              "min_duration": 2,
+              "max_file_size": 15
+            }
+          }
+        ],
+        "max_total_count": 12,
+        "max_total_video_duration": 15,
+        "max_total_audio_duration": 15,
+        "required_material_types": {
+          "any_of": [
+            1,
+            2
+          ],
+          "tips_starling_key": "video_seedance_2_audio_needed"
+        }
+      },
+      "commerce": {
+        "default": {
+          "resource_sub_type": "aigc",
+          "resource_id_type": "str",
+          "resource_id": "generate_video",
+          "benefit_type": "dreamina_seedance_20_fast",
+          "amount": 0
+        },
+        "format": "",
+        "format_conf": {
+          "unified_edit_input_video": {
+            "resource_sub_type": "aigc",
+            "resource_id_type": "str",
+            "resource_id": "generate_video",
+            "benefit_type": "dreamina_seedance_20_fast_with_video",
+            "amount": 0
+          }
+        },
+        "additional_conf": null,
+        "resolution_price_configs": [
+          {
+            "resolution": "480p",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_20_fast_480p_output",
+              "amount": 0
+            }
+          },
+          {
+            "resolution": "720p",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_20_fast_720p_output",
+              "amount": 0
+            }
+          },
+          {
+            "resolution": "1080p",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_20_fast_1080p_output",
+              "amount": 0
+            }
+          },
+          {
+            "resolution": "2k",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_20_fast_2k_output",
+              "amount": 0
+            }
+          },
+          {
+            "resolution": "4k",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_20_fast_4k_output",
+              "amount": 0
+            }
+          }
+        ]
+      },
+      "pre_audit_policy": "agi_seedance_20pro",
+      "input_media_types": [
+        "unified_edit",
+        "prompt",
+        "first_frame",
+        "end_frame"
+      ]
+    },
+    {
+      "id": "seedance-2.0",
+      "name": "Dreamina Seedance 2.0",
+      "model_req_key": "dreamina_seedance_40_pro",
+      "resolutions": [
+        "720p",
+        "1080p",
+        "4k"
+      ],
+      "ratios": [
+        "21:9",
+        "16:9",
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16"
+      ],
+      "duration": {
+        "min": 4,
+        "max": 15,
+        "default": 4,
+        "step": 1
+      },
+      "fps": 24,
+      "max_prompt_length": 4000,
+      "materials": {
+        "supported_materials": [
+          {
+            "material_type": 1,
+            "limit": {
+              "max_count": 9
+            }
+          },
+          {
+            "material_type": 2,
+            "limit": {
+              "max_count": 3,
+              "max_duration": 15,
+              "min_duration": 2,
+              "max_width": 2160,
+              "max_height": 2160,
+              "min_width": 200,
+              "min_height": 200,
+              "max_file_size": 50
+            }
+          },
+          {
+            "material_type": 3,
+            "limit": {
+              "max_count": 3,
+              "max_duration": 15,
+              "min_duration": 2,
+              "max_file_size": 15
+            }
+          }
+        ],
+        "max_total_count": 12,
+        "max_total_video_duration": 15,
+        "max_total_audio_duration": 15,
+        "required_material_types": {
+          "any_of": [
+            1,
+            2
+          ],
+          "tips_starling_key": "video_seedance_2_audio_needed"
+        }
+      },
+      "commerce": {
+        "default": {
+          "resource_sub_type": "aigc",
+          "resource_id_type": "str",
+          "resource_id": "generate_video",
+          "benefit_type": "dreamina_video_seedance_20_pro",
+          "amount": 0
+        },
+        "format": "",
+        "format_conf": {
+          "unified_edit_input_video": {
+            "resource_sub_type": "aigc",
+            "resource_id_type": "str",
+            "resource_id": "generate_video",
+            "benefit_type": "dreamina_video_seedance_20_video_add",
+            "amount": 0
+          }
+        },
+        "additional_conf": null,
+        "resolution_price_configs": [
+          {
+            "resolution": "480p",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_20_pro_480p_output",
+              "amount": 0
+            }
+          },
+          {
+            "resolution": "720p",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_20_pro_720p_output",
+              "amount": 0
+            }
+          },
+          {
+            "resolution": "1080p",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_20_pro_1080p_output",
+              "amount": 0
+            }
+          },
+          {
+            "resolution": "4k",
+            "price": {
+              "resource_sub_type": "aigc",
+              "resource_id_type": "str",
+              "resource_id": "generate_video",
+              "benefit_type": "seedance_20_pro_4k_output",
+              "amount": 0
+            }
+          }
+        ]
+      },
+      "pre_audit_policy": "agi_seedance_20pro",
+      "input_media_types": [
+        "unified_edit",
+        "prompt",
+        "first_frame",
+        "end_frame"
+      ]
+    }
+  ]
+}

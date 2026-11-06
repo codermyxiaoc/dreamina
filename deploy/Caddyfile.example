@@ -1,0 +1,5 @@
+# Run this reverse proxy on the host, outside the default compose stack.
+api.example.com {
+    encode zstd gzip
+    reverse_proxy 127.0.0.1:8787
+}

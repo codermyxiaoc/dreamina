@@ -1,0 +1,18 @@
+FROM python:3.12-slim
+ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PLAYWRIGHT_BROWSERS_PATH=/ms-playwright DISPLAY=:99
+WORKDIR /app
+COPY requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt \
+    && python -m playwright install --with-deps chromium \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends xvfb x11vnc novnc websockify openbox \
+    && rm -rf /var/lib/apt/lists/* \
+    && groupadd --gid 10001 worker \
+    && useradd --uid 10001 --gid 10001 --create-home --shell /bin/sh worker \
+    && mkdir -p /data/profiles /data/worker-state /ms-playwright && chown -R worker:worker /data /ms-playwright
+COPY dreamina_api /app/dreamina_api
+COPY deploy/browser-entrypoint.sh /app/browser-entrypoint.sh
+RUN chmod 755 /app/browser-entrypoint.sh
+USER 10001:10001
+ENTRYPOINT ["/app/browser-entrypoint.sh"]
+CMD ["run", "--config", "/data/browser-worker.json", "--account", "default"]

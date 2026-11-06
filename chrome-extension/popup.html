@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>Dreamina 本地桥接</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <h1>Dreamina 本地桥接 0.4.1</h1>
+  <p>四个 Seedance 模型 · 独立新会话 · 多图/视频参考 · 真实进度。每项任务打开专用标签页，原账号页保留。</p>
+  <label>扩展 ID <input id="extensionId" readonly></label>
+  <p class="hint">将此 ID 填入本地 .env 的 CHROME_BRIDGE_EXTENSION_ID。</p>
+  <label>账号标识 <input id="accountId" value="default" maxlength="64" autocomplete="off"></label>
+  <label>本地配对密钥 <input id="key" type="password" autocomplete="off" placeholder="CHROME_BRIDGE_KEY；留空保留已有密钥"></label>
+  <div class="actions"><button id="bind">绑定当前页并启用</button><button id="pause">暂停</button><button id="sync">检查连接</button></div>
+  <p id="status" role="status">读取状态…</p>
+  <p class="hint">启用后会领取本地队列任务并消耗 Dreamina 积分。结果不确定时自动暂停，不会重复点击。这里的密钥是本地桥接密钥，不是账号 Cookie。</p>
+  <script src="popup.js"></script>
+</body></html>

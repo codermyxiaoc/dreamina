@@ -1,0 +1,27 @@
+.env
+.env.*
+!.env.example
+*.env
+*.env.*
+!*.env.example
+.secrets/
+*.har
+evidence/
+references/
+outputs/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+.playwright-mcp/
+.claude/
+*.log
+deploy/server.env
+worker.env
+/data/
+profiles/
+worker-state/
+browser-worker.json
+deploy/browser-worker.json
+/新建 文本文档.txt

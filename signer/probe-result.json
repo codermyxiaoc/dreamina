@@ -1,0 +1,183 @@
+{
+  "exports": {
+    "keys": [
+      "frontierSign",
+      "getReferer",
+      "init",
+      "isWebmssdk",
+      "report",
+      "setTTWebid",
+      "setTTWebidV2",
+      "setTTWid",
+      "setUserMode"
+    ],
+    "internalKeys": [
+      "_sharedCache",
+      "_enablePathList",
+      "_enablePathListRegex"
+    ],
+    "signString": "function q(n){return P(48221,i,this,arguments,0,25)}"
+  },
+  "initResult": {
+    "ok": true,
+    "value": {
+      "options": {
+        "aid": 513641,
+        "isSDK": false,
+        "enablePathList": [
+          "/mweb/v1/aigc_draft/generate"
+        ],
+        "urlRewriteRules": [],
+        "sdi": false,
+        "region": "va-capcut",
+        "dev": false,
+        "mode": 514,
+        "slardarConfig": {
+          "enableSlardar": false,
+          "enableLazyload": false,
+          "settingLocation": 0,
+          "initConfigOverrides": {
+            "slardarDomain": "",
+            "slardarPluginPrefixPath": ""
+          }
+        },
+        "boe": false
+      }
+    }
+  },
+  "state": {
+    "cacheOpts": {
+      "513641": {
+        "aid": 513641,
+        "isSDK": false,
+        "region": "va-capcut",
+        "boe": false,
+        "enablePathList": [
+          "/mweb/v1/aigc_draft/generate"
+        ],
+        "mode": 514,
+        "slardarConfig": {
+          "enableSlardar": false,
+          "enableLazyload": false,
+          "settingLocation": 0,
+          "initConfigOverrides": {
+            "slardarDomain": "",
+            "slardarPluginPrefixPath": ""
+          }
+        }
+      }
+    },
+    "shared": {
+      "slardarErrs": [],
+      "ttwid": "",
+      "tt_webid": "",
+      "tt_webid_v2": "",
+      "msNewTokenList": []
+    },
+    "storageKeys": [
+      "xmsi",
+      "msToken"
+    ],
+    "globalKeys": [
+      "byted_acrawler",
+      "_mssdk"
+    ]
+  },
+  "signed": {
+    "direct": {
+      "X-Bogus": "Rpl5PTDK3OtPzdxU"
+    },
+    "sharedAfter": {
+      "slardarErrs": [],
+      "ttwid": "",
+      "tt_webid": "",
+      "tt_webid_v2": "",
+      "msNewTokenList": []
+    }
+  },
+  "intercepted": [
+    {
+      "path": "/offline-signer",
+      "origin": "https://dreamina.capcut.com",
+      "queryNames": [],
+      "queryLengths": {},
+      "bodyBytes": 0
+    },
+    {
+      "path": "/web/resource",
+      "origin": "https://mssdk-va.capcutapi.com",
+      "queryNames": [
+        "eq"
+      ],
+      "queryLengths": {
+        "eq": 96
+      },
+      "bodyBytes": 0
+    },
+    {
+      "path": "/web/resource",
+      "origin": "https://mssdk-va.capcutapi.com",
+      "queryNames": [
+        "eq"
+      ],
+      "queryLengths": {
+        "eq": 96
+      },
+      "bodyBytes": 0
+    },
+    {
+      "path": "/web/report",
+      "origin": "https://mssdk-va.capcutapi.com",
+      "queryNames": [
+        "msToken",
+        "X-Bogus",
+        "X-Gnarly"
+      ],
+      "queryLengths": {
+        "msToken": 0,
+        "X-Bogus": 28,
+        "X-Gnarly": 332
+      },
+      "bodyBytes": 5039
+    },
+    {
+      "path": "/web/common",
+      "origin": "https://mssdk-va.capcutapi.com",
+      "queryNames": [
+        "msToken",
+        "X-Bogus",
+        "X-Gnarly"
+      ],
+      "queryLengths": {
+        "msToken": 0,
+        "X-Bogus": 28,
+        "X-Gnarly": 332
+      },
+      "bodyBytes": 5039
+    },
+    {
+      "path": "/mweb/v1/aigc_draft/generate",
+      "origin": "https://dreamina-api.us.capcut.com",
+      "queryNames": [
+        "aid",
+        "device_platform",
+        "region",
+        "msToken",
+        "msToken",
+        "X-Bogus",
+        "X-Gnarly"
+      ],
+      "queryLengths": {
+        "aid": 6,
+        "device_platform": 3,
+        "region": 2,
+        "msToken": 0,
+        "X-Bogus": 28,
+        "X-Gnarly": 332
+      },
+      "bodyBytes": 22
+    }
+  ],
+  "errors": [],
+  "networkPolicy": "Chromium context offline; all route requests locally fulfilled. No account credentials supplied."
+}

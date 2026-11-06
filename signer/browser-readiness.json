@@ -1,0 +1,294 @@
+{
+  "logged_in_observed": true,
+  "login_evidence": [
+    {
+      "path": "/passport/web/account/info/",
+      "http_status": 200,
+      "business_code": null,
+      "has_user_identity": true,
+      "data_keys": [
+        "user_id",
+        "user_id_str",
+        "screen_name"
+      ]
+    }
+  ],
+  "page": {
+    "sdk_available": true,
+    "sdk_is_webmssdk": true,
+    "sdk_initialized": true,
+    "sdk_config": {
+      "aid": 513641,
+      "mode": 514,
+      "isSDK": false,
+      "region": "ttp",
+      "apiHost": "https://mssdk16-normal-us-ttp2.capcutapi.us",
+      "dfp": null,
+      "slardarConfig": {
+        "enableSlardar": true,
+        "enableLazyload": false,
+        "settingLocation": 4,
+        "initConfigOverrides": {
+          "slardarDomain": "mon.capcutapi.us",
+          "slardarPluginPrefixPath": "https://sf16-web-tos-buz.capcutcdn-us.com/obj/capcut-web-buz-tx2/slardar-web-sdk/plugins"
+        }
+      },
+      "generation_path_enabled": true
+    },
+    "page_has_login_button": false,
+    "page_has_logout_text": false,
+    "challenge_text_detected": false,
+    "challenge_frame_detected": false,
+    "title": "Dreamina: Create realistic talking avatars with AI avatar generator",
+    "document_ready_state": "complete",
+    "origin": "https://dreamina.capcut.com",
+    "path": "/ai-tool/ai-video",
+    "webdriver": true,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.0.0 Safari/537.36"
+  },
+  "navigation_error": null,
+  "sdk_network": [
+    {
+      "kind": "request",
+      "host": "mssdk16-normal-us-ttp2.capcutapi.us",
+      "path": "/web/resource",
+      "has_ms_token": false,
+      "has_x_bogus": false,
+      "has_x_gnarly": false
+    },
+    {
+      "kind": "response",
+      "host": "mssdk16-normal-us-ttp2.capcutapi.us",
+      "path": "/web/resource",
+      "http_status": 200,
+      "has_ms_token_header": true
+    },
+    {
+      "kind": "request",
+      "host": "mssdk16-normal-us-ttp2.capcutapi.us",
+      "path": "/web/report",
+      "has_ms_token": false,
+      "has_x_bogus": true,
+      "has_x_gnarly": true
+    },
+    {
+      "kind": "response",
+      "host": "mssdk16-normal-us-ttp2.capcutapi.us",
+      "path": "/web/report",
+      "http_status": 200,
+      "has_ms_token_header": true
+    },
+    {
+      "kind": "request",
+      "host": "mssdk16-normal-us-ttp2.capcutapi.us",
+      "path": "/web/report",
+      "has_ms_token": true,
+      "has_x_bogus": true,
+      "has_x_gnarly": true
+    },
+    {
+      "kind": "response",
+      "host": "mssdk16-normal-us-ttp2.capcutapi.us",
+      "path": "/web/report",
+      "http_status": 200,
+      "has_ms_token_header": true
+    }
+  ],
+  "api_origin": "https://dreamina-api-us-ttp2.us.capcut.com",
+  "ready_for_submission": true,
+  "sdk_signature_seen": true,
+  "ms_token_seen": true,
+  "network_summary": [
+    {
+      "host": "dreamina-api.us.capcut.com",
+      "path": "/mweb/v1/login/dialog_carousel",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "dreamina-api.us.capcut.com",
+      "path": "/mweb/v1/batch_collect",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/workspace/list",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/get_experiment_params",
+      "http_status": 200,
+      "count": 3
+    },
+    {
+      "host": "commerce-us-ttp2.us.capcut.com",
+      "path": "/commerce/v1/subscription/user_info",
+      "http_status": 200,
+      "count": 2
+    },
+    {
+      "host": "commerce-us-ttp2.us.capcut.com",
+      "path": "/commerce/v1/subscription/workspace/space_list",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/feature_permission",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "dreamina.capcut.com",
+      "path": "/passport/web/account/info/",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "commerce-us-ttp2.us.capcut.com",
+      "path": "/commerce/v1/benefits/user_credit_history",
+      "http_status": 200,
+      "count": 3
+    },
+    {
+      "host": "commerce-us-ttp2.us.capcut.com",
+      "path": "/commerce/v1/benefits/user_credit",
+      "http_status": 200,
+      "count": 2
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/capability/capsules",
+      "http_status": 200,
+      "count": 2
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/get_common_config",
+      "http_status": 200,
+      "count": 3
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/video_generate/get_common_config",
+      "http_status": 200,
+      "count": 8
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/audio_generate/get_common_config",
+      "http_status": 200,
+      "count": 2
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/creation_agent/v2/get_agent_config",
+      "http_status": 200,
+      "count": 2
+    },
+    {
+      "host": "commerce-us-ttp2.us.capcut.com",
+      "path": "/commerce/v1/resource_position",
+      "http_status": 200,
+      "count": 5
+    },
+    {
+      "host": "commerce-us-ttp2.us.capcut.com",
+      "path": "/commerce/v3/resource/benefit_metadata",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "commerce-us-ttp2.us.capcut.com",
+      "path": "/commerce/v3/benefits/batch_get_user_benefit",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/get_user_local_item_list",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/get_help_desk_entrance",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/feed",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/dreamina_subject/get",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/creation_agent/v2/get_default_creation_preference",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "commerce-us-ttp2.us.capcut.com",
+      "path": "/commerce/v1/common/start_up",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/aigc_draft/generate_accelerate",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "commerce-us-ttp2.us.capcut.com",
+      "path": "/commerce/v1/benefits/credit_receive",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "commerce-us-ttp2.us.capcut.com",
+      "path": "/commerce/v1/purchase/price_list",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "commerce-us-ttp2.us.capcut.com",
+      "path": "/commerce/v1/subscription/cc_price_list",
+      "http_status": 200,
+      "count": 2
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/get_user_info",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/get_image_by_uri",
+      "http_status": 200,
+      "count": 1
+    },
+    {
+      "host": "dreamina-api-us-ttp2.us.capcut.com",
+      "path": "/mweb/v1/infinite_canvas/list_project",
+      "http_status": 200,
+      "count": 1
+    }
+  ],
+  "page_error_count": 3,
+  "generation_requests_sent": 0,
+  "generation_requests_blocked": 0,
+  "challenge_detected": false,
+  "browser_type": "isolated headless Chromium; actual UA; webdriver unmodified"
+}

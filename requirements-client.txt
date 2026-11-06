@@ -1,0 +1,2 @@
+# Optional: run examples/openai_client.py against your own gateway.
+openai>=2,<3

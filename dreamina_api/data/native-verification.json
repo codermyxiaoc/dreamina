@@ -1,0 +1,41 @@
+{
+  "models": {
+    "seedream-5.0-lite": {
+      "verified_on": "2026-10-26",
+      "status": "live-verified",
+      "summary": "2048×2048、1张图片，OpenAI 风格接口返回 JPEG/base64，下载和解码通过。",
+      "cases": [{"resolution":"2048x2048","duration":null,"ratio":"1:1","reference_images":0,"reference_videos":0}],
+      "note": "本轮单账号实付6积分；图片编辑不在验证范围内。"
+    },
+    "seedance-2.0-mini": {
+      "verified_on": "2026-10-26",
+      "status": "live-verified",
+      "summary": "4秒、720p、16:9，同时携带2张参考图和1段2秒视频，生成、状态查询及下载完成。",
+      "cases": [{"resolution":"720p","duration":4,"ratio":"16:9","reference_images":2,"reference_videos":1}],
+      "note": "上游正式草稿确认2张2048×2048图片和1段960×540/2秒视频。本轮账户未扣积分，不代表长期免费或其他组合已验证。"
+    },
+    "seedance-2.0-fast": {
+      "verified_on": "2026-10-26",
+      "status": "live-verified-reconciled",
+      "summary": "4秒、720p、16:9文生视频完成，成品已下载并解码。",
+      "cases": [{"resolution":"720p","duration":4,"ratio":"16:9","reference_images":0,"reference_videos":0}],
+      "note": "首次自动回执缺失，依据唯一积分流水和上游记录逐项核对模型、提示词、时长、尺寸、时间后恢复；不宣称首次回调自动成功。为省积分未再生成一次，实付32积分。"
+    },
+    "seedance-2.0": {
+      "verified_on": "2026-10-26",
+      "status": "live-verified",
+      "summary": "4秒、720p、21:9文生视频真实生成成功；公开API进度至100%，MP4下载、完整解码及Range读取通过。",
+      "cases": [{"resolution":"720p","duration":4,"ratio":"21:9","reference_images":0,"reference_videos":0}],
+      "note": "本次仅提交一次，自动回执与独立会话均确认，无人工恢复。按submit_id核对实付68积分；实际成品1470×630、约4.017秒。旧失败证据保留；其他参数及参考素材未因此获得实测确认。证据：evidence/live-two-models-20261026/run.json。"
+    },
+    "seedance-2.5": {
+      "verified_on": "2026-10-26",
+      "status": "live-verified",
+      "summary": "4秒、480p、21:9文生视频真实生成成功；公开API进度至100%，MP4下载、完整解码及Range读取通过。",
+      "cases": [
+        {"resolution":"480p","duration":4,"ratio":"21:9","reference_images":0,"reference_videos":0}
+      ],
+      "note": "本次仅提交一次，自动回执与独立会话均确认，无人工恢复。按submit_id核对实付68积分；实际成品992×432、约4.017秒。旧失败证据保留；其他参数及参考素材未因此获得实测确认。证据：evidence/live-two-models-20261026/run.json。"
+    }
+  }
+}

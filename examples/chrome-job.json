@@ -1,0 +1,11 @@
+{
+  "account_id": "default",
+  "request": {
+    "model": "seedance-2.0-mini",
+    "prompt": "A silent watercolor animation of white clouds drifting above distant purple mountains. No people, no text, no music or speech.",
+    "duration": 4,
+    "resolution": "720p",
+    "ratio": "16:9",
+    "mode": "omni"
+  }
+}
